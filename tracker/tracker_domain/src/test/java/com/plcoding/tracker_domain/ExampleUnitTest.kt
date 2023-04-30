@@ -1,4 +1,4 @@
-package com.plcoding.tracker.tracker_domain
+package com.plcoding.tracker_domain
 
 import org.junit.Test
 
