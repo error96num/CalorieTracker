@@ -1,4 +1,4 @@
-package com.plcoding.tracker.tracker_presentation
+package com.plcoding.onboarding_domain
 
 import org.junit.Test
 

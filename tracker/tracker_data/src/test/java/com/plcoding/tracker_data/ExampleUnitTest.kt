@@ -1,4 +1,4 @@
-package com.plcoding.tracker.tracker_data
+package com.plcoding.tracker_data
 
 import org.junit.Test
 
