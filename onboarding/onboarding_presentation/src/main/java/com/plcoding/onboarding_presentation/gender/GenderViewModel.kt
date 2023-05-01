@@ -17,10 +17,10 @@ import javax.inject.Inject
 
 @HiltViewModel
 class GenderViewModel @Inject constructor(
-    private val preferences: Preferences
+    private val preferences: Preferences,
 ) : ViewModel() {
 
-    var selectedGender by mutableStateOf<Gender>(Gender.Male)
+    var selectedGender by mutableStateOf<Gender>(Gender.Female)
         private set
 
     private val _uiEvent = Channel<UiEvent>()

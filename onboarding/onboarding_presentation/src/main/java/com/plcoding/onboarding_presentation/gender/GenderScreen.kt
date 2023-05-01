@@ -21,7 +21,7 @@ import com.plcoding.onboarding_presentation.components.SelectableButton
 @Composable
 fun GenderScreen(
     onNavigate: (UiEvent.Navigate) -> Unit,
-    viewModel: GenderViewModel = hiltViewModel()
+    viewModel: GenderViewModel = hiltViewModel(),
 ) {
     val spacing = LocalSpacing.current
     LaunchedEffect(key1 = true) {

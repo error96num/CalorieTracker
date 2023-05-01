@@ -21,7 +21,7 @@ import com.plcoding.onboarding_presentation.components.UnitTextField
 fun AgeScreen(
     scaffoldState: ScaffoldState,
     onNavigate: (UiEvent.Navigate) -> Unit,
-    viewModel: AgeViewModel = hiltViewModel()
+    viewModel: AgeViewModel = hiltViewModel(),
 ) {
     val spacing = LocalSpacing.current
     val context = LocalContext.current
