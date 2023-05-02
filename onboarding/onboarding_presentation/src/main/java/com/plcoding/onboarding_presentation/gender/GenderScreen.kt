@@ -54,7 +54,7 @@ fun GenderScreen(
                     color = MaterialTheme.colors.primaryVariant,
                     selectedTextColor = Color.White,
                     onClick = {
-                        viewModel.onGenderClick(Gender.Male)
+                        viewModel.onGenderSelect(Gender.Male)
                     },
                     textStyle = MaterialTheme.typography.button.copy(
                         fontWeight = FontWeight.Normal
@@ -67,7 +67,7 @@ fun GenderScreen(
                     color = MaterialTheme.colors.primaryVariant,
                     selectedTextColor = Color.White,
                     onClick = {
-                        viewModel.onGenderClick(Gender.Female)
+                        viewModel.onGenderSelect(Gender.Female)
                     },
                     textStyle = MaterialTheme.typography.button.copy(
                         fontWeight = FontWeight.Normal
