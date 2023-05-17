@@ -39,7 +39,7 @@ fun ExpandableMeal(
             modifier = Modifier
                 .fillMaxWidth()
                 .clickable { onToggleClick() }
-                .padding(horizontal = spacing.spaceMedium),
+                .padding(spacing.spaceMedium),
             verticalAlignment = Alignment.CenterVertically
         ) {
             Image(

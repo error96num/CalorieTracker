@@ -43,7 +43,7 @@ class SearchViewModel @Inject constructor(
                 )
             }
             is SearchEvent.OnSearch -> {
-                excuteSearch()
+                executeSearch()
             }
             is SearchEvent.OnToggleTrackableFood -> {
                 state = state.copy(
@@ -65,7 +65,7 @@ class SearchViewModel @Inject constructor(
         }
     }
 
-    private fun excuteSearch() {
+    private fun executeSearch() {
         viewModelScope.launch {
             state = state.copy(
                 isSearching = true,
