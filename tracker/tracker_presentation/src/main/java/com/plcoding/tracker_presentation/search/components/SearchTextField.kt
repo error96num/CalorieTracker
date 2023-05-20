@@ -84,7 +84,7 @@ fun SearchTextField(
             )
         }
         IconButton(
-            onClick = { onSearch },
+            onClick = onSearch,
             modifier = Modifier.align(Alignment.CenterEnd)
         ) {
             Icon(
