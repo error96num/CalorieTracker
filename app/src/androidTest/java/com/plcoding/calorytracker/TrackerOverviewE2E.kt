@@ -1,5 +1,6 @@
 package com.plcoding.calorytracker
 
+import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material.Scaffold
@@ -37,7 +38,6 @@ import io.mockk.mockk
 import org.junit.Before
 import org.junit.Rule
 import org.junit.Test
-import javax.inject.Inject
 import kotlin.math.roundToInt
 
 @HiltAndroidTest
@@ -71,6 +71,7 @@ class TrackerOverviewE2E {
             proteinRatio = 0.3f,
             fatRatio = 0.3f
         )
+        every { preferences.saveShouldShowOnboarding(false) } returns Unit
         repositoryFake = TrackerRepositoryFake()
         trackerUseCases = TrackerUseCases(
             trackFood = TrackFood(repositoryFake),
@@ -87,7 +88,7 @@ class TrackerOverviewE2E {
             trackerUseCases = trackerUseCases,
             filterOutDigits = FilterOutDigits()
         )
-        composeRule.setContent {
+        composeRule.activity.setContent {
             CaloryTrackerTheme {
                 val scaffoldState = rememberScaffoldState()
                 navController = rememberNavController()

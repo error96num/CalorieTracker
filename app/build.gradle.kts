@@ -16,6 +16,7 @@ android {
         versionName = ProjectConfig.versionName
 
         testInstrumentationRunner = "com.plcoding.calorytracker.HiltTestRunner"
+        testInstrumentationRunnerArguments["clearPackageData"] = "true"
         vectorDrawables {
             useSupportLibrary = true
         }
