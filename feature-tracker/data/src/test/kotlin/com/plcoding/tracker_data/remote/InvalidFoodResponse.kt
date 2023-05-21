@@ -1,12 +1,12 @@
-package com.plcoding.tracker.tracker_data.remote
+package com.plcoding.tracker_data.remote
 
-val validFoodResponse = """
+val malformedFoodResponse = """
     {
         "count": 6004,
         "page": 1,
-        "page_count": 40,
+        "page_casdgasdfgsaount": 40,
         "page_size": 40,
-        "products": [
+        "products: [
             {
                 "image_front_thumb_url": "https://images.openfoodfacts.org/images/products/761/450/001/0617/front_en.28.100.jpg",
                 "nutriments": {
