@@ -4,10 +4,10 @@ object Modules {
     const val core = ":core"
     const val coreUi = ":core-ui"
 
-    const val onboardingDomain = ":onboarding:domain"
-    const val onboardingPresentation = ":onboarding:presentation"
+    const val onboardingDomain = ":feature-onboarding:domain"
+    const val onboardingPresentation = ":feature-onboarding:presentation"
 
-    const val trackerData = ":tracker:data"
-    const val trackerDomain = ":tracker:domain"
-    const val trackerPresentation = ":tracker:presentation"
+    const val trackerData = ":feature-tracker:data"
+    const val trackerDomain = ":feature-tracker:domain"
+    const val trackerPresentation = ":feature-tracker:presentation"
 }
