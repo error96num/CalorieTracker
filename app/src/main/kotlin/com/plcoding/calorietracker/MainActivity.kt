@@ -1,4 +1,4 @@
-package com.plcoding.calorytracker
+package com.plcoding.calorietracker
 
 import android.os.Bundle
 import androidx.activity.ComponentActivity
@@ -12,9 +12,9 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
-import com.plcoding.calorytracker.ui.theme.CaloryTrackerTheme
+import com.plcoding.calorietracker.ui.theme.CalorieTrackerTheme
 import com.plcoding.core.domain.preferences.Preferences
-import com.plcoding.calorytracker.navigation.NavigationHelper
+import com.plcoding.calorietracker.navigation.NavigationHelper
 import com.plcoding.onboarding.presentation.activity.ActivityScreen
 import com.plcoding.onboarding.presentation.age.AgeScreen
 import com.plcoding.onboarding.presentation.gender.GenderScreen
@@ -38,7 +38,7 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         val shouldShowOnboarding = preferences.loadShouldShowOnboarding()
         setContent {
-            CaloryTrackerTheme {
+            CalorieTrackerTheme {
                 val navController = rememberNavController()
                 val scaffoldState = rememberScaffoldState()
                 Scaffold(

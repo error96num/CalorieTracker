@@ -1,4 +1,4 @@
-package com.plcoding.calorytracker
+package com.plcoding.calorietracker
 
 import org.junit.Test
 

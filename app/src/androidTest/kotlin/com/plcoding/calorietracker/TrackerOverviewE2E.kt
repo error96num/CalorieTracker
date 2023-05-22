@@ -1,4 +1,4 @@
-package com.plcoding.calorytracker
+package com.plcoding.calorietracker
 
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.fillMaxSize
@@ -15,9 +15,9 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.google.common.truth.Truth.assertThat
-import com.plcoding.calorytracker.navigation.NavigationHelper
-import com.plcoding.calorytracker.repository.TrackerRepositoryFake
-import com.plcoding.calorytracker.ui.theme.CaloryTrackerTheme
+import com.plcoding.calorietracker.navigation.NavigationHelper
+import com.plcoding.calorietracker.repository.TrackerRepositoryFake
+import com.plcoding.calorietracker.ui.theme.CalorieTrackerTheme
 import com.plcoding.core.domain.model.ActivityLevel
 import com.plcoding.core.domain.model.Gender
 import com.plcoding.core.domain.model.GoalType
@@ -89,7 +89,7 @@ class TrackerOverviewE2E {
             filterOutDigits = FilterOutDigits()
         )
         composeRule.activity.setContent {
-            CaloryTrackerTheme {
+            CalorieTrackerTheme {
                 val scaffoldState = rememberScaffoldState()
                 navController = rememberNavController()
                 Scaffold(

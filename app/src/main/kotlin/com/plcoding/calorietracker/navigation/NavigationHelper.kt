@@ -1,4 +1,4 @@
-package com.plcoding.calorytracker.navigation
+package com.plcoding.calorietracker.navigation
 
 object NavigationHelper {
 

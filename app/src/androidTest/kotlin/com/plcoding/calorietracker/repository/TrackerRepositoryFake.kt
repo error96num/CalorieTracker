@@ -1,4 +1,4 @@
-package com.plcoding.calorytracker.repository
+package com.plcoding.calorietracker.repository
 
 import com.plcoding.tracker.domain.model.TrackableFood
 import com.plcoding.tracker.domain.model.TrackedFood

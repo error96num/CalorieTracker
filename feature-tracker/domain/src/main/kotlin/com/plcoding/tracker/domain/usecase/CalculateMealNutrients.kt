@@ -34,16 +34,16 @@ class CalculateMealNutrients(
         val totalCalories = allNutrients.values.sumOf { it.calories }
 
         val userInfo = preferences.loadUserInfo()
-        val caloryGoal = dailyCaloryRequirement(userInfo)
-        val carbsGoal = (caloryGoal * userInfo.carbRatio / CaloriesPerGram.CARBS).roundToInt()
-        val proteinGoal = (caloryGoal * userInfo.proteinRatio / CaloriesPerGram.PROTEIN).roundToInt()
-        val fatGoal = (caloryGoal * userInfo.fatRatio / CaloriesPerGram.FAT).roundToInt()
+        val calorieGoal = dailyCalorieRequirement(userInfo)
+        val carbsGoal = (calorieGoal * userInfo.carbRatio / CaloriesPerGram.CARBS).roundToInt()
+        val proteinGoal = (calorieGoal * userInfo.proteinRatio / CaloriesPerGram.PROTEIN).roundToInt()
+        val fatGoal = (calorieGoal * userInfo.fatRatio / CaloriesPerGram.FAT).roundToInt()
 
         return Result(
             carbsGoal = carbsGoal,
             proteinGoal = proteinGoal,
             fatGoal = fatGoal,
-            caloriesGoal = caloryGoal,
+            caloriesGoal = calorieGoal,
             totalCarbs = totalCarbs,
             totalProtein = totalProtein,
             totalFat = totalFat,
@@ -66,18 +66,18 @@ class CalculateMealNutrients(
         }
     }
 
-    private fun dailyCaloryRequirement(userInfo: UserInfo): Int {
+    private fun dailyCalorieRequirement(userInfo: UserInfo): Int {
         val activityFactor = when(userInfo.activityLevel) {
             is ActivityLevel.Low -> 1.2f
             is ActivityLevel.Medium -> 1.3f
             is ActivityLevel.High -> 1.4f
         }
-        val caloryExtra = when(userInfo.goalType) {
+        val calorieExtra = when(userInfo.goalType) {
             is GoalType.LoseWeight -> -500
             is GoalType.KeepWeight -> 0
             is GoalType.GainWeight -> 500
         }
-        return (bmr(userInfo) * activityFactor + caloryExtra).roundToInt()
+        return (bmr(userInfo) * activityFactor + calorieExtra).roundToInt()
     }
 
     data class MealNutrients(
