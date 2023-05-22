@@ -5,6 +5,7 @@ import com.plcoding.tracker.data.mapper.toTrackableFood
 import com.plcoding.tracker.data.mapper.toTrackedFood
 import com.plcoding.tracker.data.mapper.toTrackedFoodEntity
 import com.plcoding.tracker.data.remote.OpenFoodApi
+import com.plcoding.tracker.domain.model.CaloriesPerGram
 import com.plcoding.tracker.domain.model.TrackableFood
 import com.plcoding.tracker.domain.model.TrackedFood
 import com.plcoding.tracker.domain.repository.TrackerRepository
@@ -16,6 +17,11 @@ class TrackerRepositoryImpl(
     private val dao: TrackerDao,
     private val api: OpenFoodApi,
 ): TrackerRepository {
+
+    companion object {
+        const val LOWER_BOUND_RATE = 0.99f
+        const val UPPER_BOUND_RATE = 1.01f
+    }
 
     override suspend fun searchFood(
         query: String,
@@ -32,11 +38,11 @@ class TrackerRepositoryImpl(
                 searchDto.products
                     .filter {
                         val calculatedCalories =
-                            it.nutriments.carbohydrates100g * 4f +
-                                it.nutriments.proteins100g * 4f +
-                                    it.nutriments.fat100g * 9f
-                        val lowerBound = calculatedCalories * 0.99f
-                        val upperBound = calculatedCalories * 1.01f
+                            it.nutriments.carbohydrates100g * CaloriesPerGram.CARBS +
+                                it.nutriments.proteins100g * CaloriesPerGram.PROTEIN +
+                                    it.nutriments.fat100g * CaloriesPerGram.FAT
+                        val lowerBound = calculatedCalories * LOWER_BOUND_RATE
+                        val upperBound = calculatedCalories * UPPER_BOUND_RATE
                         it.nutriments.energyKcal100g in  (lowerBound..upperBound)
                     }
                     .mapNotNull { it.toTrackableFood() }
