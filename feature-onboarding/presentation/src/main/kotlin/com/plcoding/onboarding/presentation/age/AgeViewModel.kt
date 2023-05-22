@@ -22,7 +22,11 @@ class AgeViewModel @Inject constructor(
     private val filterOutDigits: FilterOutDigits,
 ): ViewModel() {
 
-    var age by mutableStateOf("20")
+    companion object {
+        const val DEFAULT_AGE = "20"
+    }
+
+    var age by mutableStateOf(DEFAULT_AGE)
         private set
 
     private val _uiEvent = Channel<UiEvent>()
