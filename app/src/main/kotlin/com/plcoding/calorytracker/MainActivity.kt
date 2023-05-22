@@ -15,16 +15,16 @@ import androidx.navigation.navArgument
 import com.plcoding.calorytracker.ui.theme.CaloryTrackerTheme
 import com.plcoding.core.domain.preferences.Preferences
 import com.plcoding.calorytracker.navigation.Route
-import com.plcoding.onboarding_presentation.activity.ActivityScreen
-import com.plcoding.onboarding_presentation.age.AgeScreen
-import com.plcoding.onboarding_presentation.gender.GenderScreen
-import com.plcoding.onboarding_presentation.goal.GoalScreen
-import com.plcoding.onboarding_presentation.height.HeightScreen
-import com.plcoding.onboarding_presentation.nutrient_goal.NutrientGoalScreen
-import com.plcoding.onboarding_presentation.weight.WeightScreen
-import com.plcoding.onboarding_presentation.welcome.WelcomeScreen
-import com.plcoding.tracker_presentation.search.SearchScreen
-import com.plcoding.tracker_presentation.tracker_overview.TrackerOverviewScreen
+import com.plcoding.onboarding.presentation.activity.ActivityScreen
+import com.plcoding.onboarding.presentation.age.AgeScreen
+import com.plcoding.onboarding.presentation.gender.GenderScreen
+import com.plcoding.onboarding.presentation.goal.GoalScreen
+import com.plcoding.onboarding.presentation.height.HeightScreen
+import com.plcoding.onboarding.presentation.nutrient_goal.NutrientGoalScreen
+import com.plcoding.onboarding.presentation.weight.WeightScreen
+import com.plcoding.onboarding.presentation.welcome.WelcomeScreen
+import com.plcoding.tracker.presentation.search.SearchScreen
+import com.plcoding.tracker.presentation.tracker_overview.TrackerOverviewScreen
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

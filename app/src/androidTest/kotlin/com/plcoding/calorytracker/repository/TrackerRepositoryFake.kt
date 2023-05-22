@@ -1,8 +1,8 @@
 package com.plcoding.calorytracker.repository
 
-import com.plcoding.tracker.tracker_domain.model.TrackableFood
-import com.plcoding.tracker.tracker_domain.model.TrackedFood
-import com.plcoding.tracker.tracker_domain.repository.TrackerRepository
+import com.plcoding.tracker.domain.model.TrackableFood
+import com.plcoding.tracker.domain.model.TrackedFood
+import com.plcoding.tracker.domain.repository.TrackerRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.MutableSharedFlow
 import java.time.LocalDate
