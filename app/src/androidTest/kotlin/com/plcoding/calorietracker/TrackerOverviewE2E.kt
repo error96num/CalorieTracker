@@ -28,8 +28,8 @@ import com.plcoding.tracker.domain.model.TrackableFood
 import com.plcoding.tracker.domain.usecase.*
 import com.plcoding.tracker.presentation.search.SearchScreen
 import com.plcoding.tracker.presentation.search.SearchViewModel
-import com.plcoding.tracker.presentation.tracker_overview.TrackerOverviewScreen
-import com.plcoding.tracker.presentation.tracker_overview.TrackerOverviewViewModel
+import com.plcoding.tracker.presentation.overview.TrackerOverviewScreen
+import com.plcoding.tracker.presentation.overview.TrackerOverviewViewModel
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
 import io.mockk.InternalPlatformDsl.toStr

@@ -1,4 +1,4 @@
-package com.plcoding.tracker.presentation.tracker_overview.components
+package com.plcoding.tracker.presentation.overview.components
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.res.stringResource

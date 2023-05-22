@@ -1,6 +1,5 @@
-package com.plcoding.tracker.presentation.tracker_overview.components
+package com.plcoding.tracker.presentation.overview.components
 
-import android.widget.Space
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -17,7 +16,7 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
-import com.plcoding.core_ui.LocalSpacing
+import com.plcoding.coreui.LocalSpacing
 import com.plcoding.tracker.presentation.R
 
 @Composable

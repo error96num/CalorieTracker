@@ -1,4 +1,4 @@
-package com.plcoding.core_ui
+package com.plcoding.coreui
 
 import org.junit.Test
 

@@ -1,4 +1,4 @@
-package com.plcoding.tracker.presentation.tracker_overview.components
+package com.plcoding.tracker.presentation.overview.components
 
 import androidx.compose.animation.AnimatedVisibility
 import androidx.compose.foundation.Image
@@ -17,11 +17,11 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.sp
-import com.plcoding.core_ui.LocalSpacing
+import com.plcoding.coreui.LocalSpacing
 import com.plcoding.tracker.presentation.R
 import com.plcoding.tracker.presentation.components.NutrientInfo
 import com.plcoding.tracker.presentation.components.UnitDisplay
-import com.plcoding.tracker.presentation.tracker_overview.Meal
+import com.plcoding.tracker.presentation.overview.Meal
 
 @Composable
 fun ExpandableMeal(

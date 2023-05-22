@@ -1,4 +1,4 @@
-package com.plcoding.tracker.presentation.tracker_overview.components
+package com.plcoding.tracker.presentation.overview.components
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Row
@@ -35,7 +35,7 @@ fun DaySelector(
             )
         }
         Text(
-            text = com.plcoding.tracker.presentation.tracker_overview.components.parseDateText(
+            text = com.plcoding.tracker.presentation.overview.components.parseDateText(
                 date = date
             ),
             style = MaterialTheme.typography.h2

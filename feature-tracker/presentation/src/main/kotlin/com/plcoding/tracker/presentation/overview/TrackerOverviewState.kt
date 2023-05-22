@@ -1,4 +1,4 @@
-package com.plcoding.tracker.presentation.tracker_overview
+package com.plcoding.tracker.presentation.overview
 
 import com.plcoding.tracker.domain.model.TrackedFood
 import java.time.LocalDate
@@ -14,5 +14,5 @@ data class TrackerOverviewState(
     val caloriesGoal: Int = 0,
     val date: LocalDate = LocalDate.now(),
     val trackedFoods: List<TrackedFood> = emptyList(),
-    val meals: List<Meal> = com.plcoding.tracker.presentation.tracker_overview.defaultMeal,
+    val meals: List<Meal> = com.plcoding.tracker.presentation.overview.defaultMeal,
 )

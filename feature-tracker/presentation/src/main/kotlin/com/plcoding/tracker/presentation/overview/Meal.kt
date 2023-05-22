@@ -1,4 +1,4 @@
-package com.plcoding.tracker.presentation.tracker_overview
+package com.plcoding.tracker.presentation.overview
 
 import androidx.annotation.DrawableRes
 import com.plcoding.core.util.UiText

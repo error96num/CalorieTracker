@@ -1,4 +1,4 @@
-package com.plcoding.tracker.presentation.tracker_overview
+package com.plcoding.tracker.presentation.overview
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
@@ -9,7 +9,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import coil.annotation.ExperimentalCoilApi
-import com.plcoding.core_ui.LocalSpacing
+import com.plcoding.coreui.LocalSpacing
 import com.plcoding.core.R
 
 @OptIn(ExperimentalCoilApi::class)
@@ -27,11 +27,11 @@ fun TrackerOverviewScreen(
             .padding(bottom = spacing.spaceMedium)
     ) {
         item {
-            com.plcoding.tracker.presentation.tracker_overview.components.NutrientsHeader(
+            com.plcoding.tracker.presentation.overview.components.NutrientsHeader(
                 state = state
             )
             Spacer(modifier = Modifier.height(spacing.spaceMedium))
-            com.plcoding.tracker.presentation.tracker_overview.components.DaySelector(
+            com.plcoding.tracker.presentation.overview.components.DaySelector(
                 date = state.date,
                 onPreviousDayClick = {
                     viewModel.onEvent(TrackerOverviewEvent.OnPreviousDayClick)
@@ -46,7 +46,7 @@ fun TrackerOverviewScreen(
             Spacer(modifier = Modifier.height(spacing.spaceMedium))
         }
         items(state.meals) { meal ->
-            com.plcoding.tracker.presentation.tracker_overview.components.ExpandableMeal(
+            com.plcoding.tracker.presentation.overview.components.ExpandableMeal(
                 meal = meal,
                 onToggleClick = {
                     viewModel.onEvent(TrackerOverviewEvent.OnToggleMealClick(meal))
@@ -61,7 +61,7 @@ fun TrackerOverviewScreen(
                             it.mealType == meal.mealType
                         }
                         foods.forEach { food ->
-                            com.plcoding.tracker.presentation.tracker_overview.components.TrackedFoodItem(
+                            com.plcoding.tracker.presentation.overview.components.TrackedFoodItem(
                                 trackedFood = food,
                                 onDeleteClick = {
                                     viewModel.onEvent(
@@ -72,7 +72,7 @@ fun TrackerOverviewScreen(
                             )
                             Spacer(modifier = Modifier.height(spacing.spaceMedium))
                         }
-                        com.plcoding.tracker.presentation.tracker_overview.components.AddButton(
+                        com.plcoding.tracker.presentation.overview.components.AddButton(
                             text = stringResource(
                                 id = R.string.add_meal,
                                 meal.name.asString(context)

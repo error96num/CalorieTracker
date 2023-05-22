@@ -1,4 +1,4 @@
-package com.plcoding.tracker.presentation.tracker_overview.components
+package com.plcoding.tracker.presentation.overview.components
 
 import androidx.compose.animation.core.Animatable
 import androidx.compose.foundation.Canvas
@@ -9,9 +9,9 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.geometry.Size
-import com.plcoding.core_ui.CarbColor
-import com.plcoding.core_ui.FatColor
-import com.plcoding.core_ui.ProteinColor
+import com.plcoding.coreui.CarbColor
+import com.plcoding.coreui.FatColor
+import com.plcoding.coreui.ProteinColor
 import com.plcoding.tracker.domain.model.CaloriesPerGram
 
 @Composable

@@ -20,7 +20,7 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import coil.annotation.ExperimentalCoilApi
 import com.plcoding.core.util.UiEvent
 import com.plcoding.core.R
-import com.plcoding.core_ui.LocalSpacing
+import com.plcoding.coreui.LocalSpacing
 import com.plcoding.tracker.domain.model.MealType
 import com.plcoding.tracker.presentation.search.components.SearchTextField
 import com.plcoding.tracker.presentation.search.components.TrackableFoodItem

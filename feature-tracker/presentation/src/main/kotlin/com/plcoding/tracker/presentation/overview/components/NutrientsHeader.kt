@@ -1,4 +1,4 @@
-package com.plcoding.tracker.presentation.tracker_overview.components
+package com.plcoding.tracker.presentation.overview.components
 
 import androidx.compose.animation.core.animateIntAsState
 import androidx.compose.foundation.background
@@ -13,13 +13,13 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.plcoding.core_ui.CarbColor
-import com.plcoding.core_ui.FatColor
-import com.plcoding.core_ui.LocalSpacing
-import com.plcoding.core_ui.ProteinColor
+import com.plcoding.coreui.CarbColor
+import com.plcoding.coreui.FatColor
+import com.plcoding.coreui.LocalSpacing
+import com.plcoding.coreui.ProteinColor
 import com.plcoding.tracker.presentation.R
 import com.plcoding.tracker.presentation.components.UnitDisplay
-import com.plcoding.tracker.presentation.tracker_overview.TrackerOverviewState
+import com.plcoding.tracker.presentation.overview.TrackerOverviewState
 
 @Composable
 fun NutrientsHeader(
@@ -73,7 +73,7 @@ fun NutrientsHeader(
             }
         }
         Spacer(modifier = Modifier.height(spacing.spaceSmall))
-        com.plcoding.tracker.presentation.tracker_overview.components.NutrientsBar(
+        com.plcoding.tracker.presentation.overview.components.NutrientsBar(
             carbs = state.totalCarbs,
             protein = state.totalProtein,
             fat = state.totalFat,
@@ -88,21 +88,21 @@ fun NutrientsHeader(
             modifier = Modifier.fillMaxWidth(),
             horizontalArrangement = Arrangement.SpaceBetween,
         ) {
-            com.plcoding.tracker.presentation.tracker_overview.components.NutrientBarInfo(
+            com.plcoding.tracker.presentation.overview.components.NutrientBarInfo(
                 value = state.totalCarbs,
                 goal = state.carbsGoal,
                 name = stringResource(id = R.string.carbs),
                 color = CarbColor,
                 modifier = Modifier.size(90.dp)
             )
-            com.plcoding.tracker.presentation.tracker_overview.components.NutrientBarInfo(
+            com.plcoding.tracker.presentation.overview.components.NutrientBarInfo(
                 value = state.totalProtein,
                 goal = state.proteinGoal,
                 name = stringResource(id = R.string.protein),
                 color = ProteinColor,
                 modifier = Modifier.size(90.dp)
             )
-            com.plcoding.tracker.presentation.tracker_overview.components.NutrientBarInfo(
+            com.plcoding.tracker.presentation.overview.components.NutrientBarInfo(
                 value = state.totalFat,
                 goal = state.fatGoal,
                 name = stringResource(id = R.string.fat),

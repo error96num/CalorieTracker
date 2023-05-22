@@ -24,7 +24,7 @@ import com.plcoding.onboarding.presentation.nutrient_goal.NutrientGoalScreen
 import com.plcoding.onboarding.presentation.weight.WeightScreen
 import com.plcoding.onboarding.presentation.welcome.WelcomeScreen
 import com.plcoding.tracker.presentation.search.SearchScreen
-import com.plcoding.tracker.presentation.tracker_overview.TrackerOverviewScreen
+import com.plcoding.tracker.presentation.overview.TrackerOverviewScreen
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

@@ -1,4 +1,4 @@
-package com.plcoding.tracker.presentation.tracker_overview
+package com.plcoding.tracker.presentation.overview
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
