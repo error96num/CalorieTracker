@@ -8,10 +8,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardActions
 import androidx.compose.foundation.text.KeyboardOptions
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Search
 import androidx.compose.runtime.Composable
@@ -24,9 +21,9 @@ import androidx.compose.ui.focus.onFocusChanged
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.testTag
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.ImeAction
-import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import com.plcoding.core_ui.LocalSpacing
 import com.plcoding.tracker.presentation.R
@@ -37,6 +34,7 @@ fun SearchTextField(
     onValueChange: (String) -> Unit,
     onSearch: () -> Unit,
     modifier: Modifier = Modifier,
+    textStyle: TextStyle = MaterialTheme.typography.body1.copy(color = MaterialTheme.colors.onSurface),
     hint: String = stringResource(id = R.string.search),
     shouldShowHint: Boolean = false,
     onFocusChanged: (FocusState) -> Unit,
@@ -48,6 +46,7 @@ fun SearchTextField(
         BasicTextField(
             value = text,
             onValueChange = onValueChange,
+            textStyle = textStyle,
             singleLine = true,
             keyboardActions = KeyboardActions(
                 onSearch = {

@@ -146,6 +146,7 @@ fun TrackableFoodItem(
                     BasicTextField(
                         value = trackableFoodUiState.amount,
                         onValueChange = onAmountChange,
+                        textStyle = MaterialTheme.typography.body1.copy(color = MaterialTheme.colors.onSurface),
                         keyboardOptions = KeyboardOptions(
                             imeAction = if(trackableFoodUiState.amount.isNotBlank()) {
                                 ImeAction.Done
