@@ -13,7 +13,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.plcoding.core.R
 import com.plcoding.core.util.UiEvent
-import com.plcoding.core_ui.LocalSpacing
+import com.plcoding.coreui.LocalSpacing
 import com.plcoding.onboarding.presentation.components.ActionButton
 import com.plcoding.onboarding.presentation.components.UnitTextField
 
