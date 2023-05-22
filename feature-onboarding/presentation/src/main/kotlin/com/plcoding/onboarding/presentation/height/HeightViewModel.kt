@@ -22,7 +22,11 @@ class HeightViewModel @Inject constructor(
     private val filterOutDigits: FilterOutDigits,
 ): ViewModel() {
 
-    var height by mutableStateOf("160")
+    companion object {
+        const val DEFAULT_HEIGHT = "160"
+    }
+
+    var height by mutableStateOf(DEFAULT_HEIGHT)
         private set
 
     private val _uiEvent = Channel<UiEvent>()

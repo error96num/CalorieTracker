@@ -12,6 +12,7 @@ import androidx.compose.ui.geometry.Size
 import com.plcoding.core_ui.CarbColor
 import com.plcoding.core_ui.FatColor
 import com.plcoding.core_ui.ProteinColor
+import com.plcoding.tracker.domain.model.CaloriesPerGram
 
 @Composable
 fun NutrientsBar(
@@ -35,17 +36,17 @@ fun NutrientsBar(
     }
     LaunchedEffect(key1 = carbs) {
         carbWidthRatio.animateTo(
-            targetValue = ((carbs * 4f) / calorieGoal)
+            targetValue = ((carbs * CaloriesPerGram.CARBS) / calorieGoal)
         )
     }
     LaunchedEffect(key1 = protein) {
         proteinWidthRatio.animateTo(
-            targetValue = ((protein * 4f) / calorieGoal)
+            targetValue = ((protein * CaloriesPerGram.PROTEIN) / calorieGoal)
         )
     }
     LaunchedEffect(key1 = fat) {
         fatWidthRatio.animateTo(
-            targetValue = ((fat * 9f) / calorieGoal)
+            targetValue = ((fat * CaloriesPerGram.FAT) / calorieGoal)
         )
     }
     Canvas(modifier = modifier) {

@@ -15,7 +15,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.google.common.truth.Truth.assertThat
-import com.plcoding.calorytracker.navigation.Route
+import com.plcoding.calorytracker.navigation.NavigationHelper
 import com.plcoding.calorytracker.repository.TrackerRepositoryFake
 import com.plcoding.calorytracker.ui.theme.CaloryTrackerTheme
 import com.plcoding.core.domain.model.ActivityLevel
@@ -98,14 +98,15 @@ class TrackerOverviewE2E {
                 ) { padding ->
                     NavHost(
                         navController = navController,
-                        startDestination = Route.TRACKER_OVERVIEW,
+                        startDestination = NavigationHelper.TrackerOverview.route,
                         modifier = Modifier.padding(padding)
                     ) {
-                        composable(Route.TRACKER_OVERVIEW) {
+                        composable(NavigationHelper.TrackerOverview.route) {
                             TrackerOverviewScreen(
                                 onNavigateToSearch = { mealName, day, month, year ->
                                     navController.navigate(
-                                        Route.SEARCH + "/$mealName" +
+                                        NavigationHelper.Search.route +
+                                                "/$mealName" +
                                                 "/$day" +
                                                 "/$month" +
                                                 "/$year"
@@ -115,26 +116,30 @@ class TrackerOverviewE2E {
                             )
                         }
                         composable(
-                            route = Route.SEARCH + "/{mealName}/{dayOfMonth}/{month}/{year}",
+                            route = NavigationHelper.Search.route +
+                                    "/{${NavigationHelper.Search.mealName}}" +
+                                    "/{${NavigationHelper.Search.dayOfMonth}}" +
+                                    "/{${NavigationHelper.Search.month}}" +
+                                    "/{${NavigationHelper.Search.year}}",
                             arguments = listOf(
-                                navArgument("mealName") {
+                                navArgument(NavigationHelper.Search.mealName) {
                                     type = NavType.StringType
                                 },
-                                navArgument("dayOfMonth") {
+                                navArgument(NavigationHelper.Search.dayOfMonth) {
                                     type = NavType.IntType
                                 },
-                                navArgument("month") {
+                                navArgument(NavigationHelper.Search.month) {
                                     type = NavType.IntType
                                 },
-                                navArgument("year") {
+                                navArgument(NavigationHelper.Search.year) {
                                     type = NavType.IntType
                                 },
                             )
                         ) {
-                            val mealName = it.arguments?.getString("mealName")!!
-                            val dayOfMonth = it.arguments?.getInt("dayOfMonth")!!
-                            val month = it.arguments?.getInt("month")!!
-                            val year = it.arguments?.getInt("year")!!
+                            val mealName = it.arguments?.getString(NavigationHelper.Search.mealName)!!
+                            val dayOfMonth = it.arguments?.getInt(NavigationHelper.Search.dayOfMonth)!!
+                            val month = it.arguments?.getInt(NavigationHelper.Search.month)!!
+                            val year = it.arguments?.getInt(NavigationHelper.Search.year)!!
                             SearchScreen(
                                 scaffoldState = scaffoldState,
                                 mealName = mealName,
@@ -188,7 +193,7 @@ class TrackerOverviewE2E {
             navController
                 .currentDestination
                 ?.route
-                ?.startsWith(Route.SEARCH)
+                ?.startsWith(NavigationHelper.Search.route)
         ).isTrue()
 
         composeRule
@@ -214,7 +219,7 @@ class TrackerOverviewE2E {
             navController
                 .currentDestination
                 ?.route
-                ?.startsWith(Route.TRACKER_OVERVIEW)
+                ?.startsWith(NavigationHelper.TrackerOverview.route)
         )
 
         composeRule

@@ -5,6 +5,7 @@ import com.plcoding.core.domain.model.Gender
 import com.plcoding.core.domain.model.GoalType
 import com.plcoding.core.domain.model.UserInfo
 import com.plcoding.core.domain.preferences.Preferences
+import com.plcoding.tracker.domain.model.CaloriesPerGram
 import com.plcoding.tracker.domain.model.MealType
 import com.plcoding.tracker.domain.model.TrackedFood
 import kotlin.math.roundToInt
@@ -34,9 +35,9 @@ class CalculateMealNutrients(
 
         val userInfo = preferences.loadUserInfo()
         val caloryGoal = dailyCaloryRequirement(userInfo)
-        val carbsGoal = (caloryGoal * userInfo.carbRatio / 4f).roundToInt()
-        val proteinGoal = (caloryGoal * userInfo.proteinRatio / 4f).roundToInt()
-        val fatGoal = (caloryGoal * userInfo.fatRatio / 9f).roundToInt()
+        val carbsGoal = (caloryGoal * userInfo.carbRatio / CaloriesPerGram.CARBS).roundToInt()
+        val proteinGoal = (caloryGoal * userInfo.proteinRatio / CaloriesPerGram.PROTEIN).roundToInt()
+        val fatGoal = (caloryGoal * userInfo.fatRatio / CaloriesPerGram.FAT).roundToInt()
 
         return Result(
             carbsGoal = carbsGoal,
