@@ -5,12 +5,10 @@ sealed class Gender(val name: String) {
     object Female: Gender("female")
 
     companion object {
+        private val map by lazy { listOf(Male, Female).associateBy(Gender::name) }
+
         fun fromString(name: String): Gender {
-            return when(name) {
-                "male" -> Male
-                "female" -> Female
-                else -> Female
-            }
+            return map[name.lowercase()] ?: Female
         }
     }
 }

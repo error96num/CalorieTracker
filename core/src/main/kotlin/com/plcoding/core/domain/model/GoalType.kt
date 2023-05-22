@@ -6,13 +6,10 @@ sealed class GoalType(val name: String) {
     object GainWeight: GoalType("gain_weight")
 
     companion object {
+        private val map by lazy { listOf(LoseWeight, KeepWeight, GainWeight).associateBy(GoalType::name) }
+
         fun fromString(name: String): GoalType {
-            return when(name) {
-                "lose_weight" -> LoseWeight
-                "keep_weight" -> KeepWeight
-                "gain_weight" -> GainWeight
-                else -> KeepWeight
-            }
+            return map[name.lowercase()] ?: KeepWeight
         }
     }
 }
