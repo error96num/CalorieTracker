@@ -7,12 +7,10 @@ sealed class MealType(val name: String) {
     object Snack: MealType("snack")
 
     companion object {
-        private val map = values().associateBy(MealType::name)
+        private val map by lazy { listOf(Breakfast, Lunch, Dinner, Snack).associateBy(MealType::name) }
 
         fun fromString(name: String): MealType {
             return map[name.lowercase()] ?: Breakfast
         }
-
-        private fun values() = listOf(Breakfast, Lunch, Dinner, Snack)
     }
 }
