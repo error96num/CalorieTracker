@@ -5,10 +5,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.plcoding.core.domain.use_case.FilterOutDigits
+import com.plcoding.core.domain.usecase.FilterOutDigits
 import com.plcoding.core.util.UiEvent
 import com.plcoding.core.util.UiText
-import com.plcoding.tracker.domain.use_case.TrackerUseCases
+import com.plcoding.tracker.domain.usecase.TrackerUseCases
 import com.plcoding.core.R
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.channels.Channel

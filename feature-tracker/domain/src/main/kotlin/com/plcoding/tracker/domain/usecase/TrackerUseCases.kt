@@ -1,4 +1,4 @@
-package com.plcoding.tracker.domain.use_case
+package com.plcoding.tracker.domain.usecase
 
 data class TrackerUseCases(
     val trackFood: TrackFood,

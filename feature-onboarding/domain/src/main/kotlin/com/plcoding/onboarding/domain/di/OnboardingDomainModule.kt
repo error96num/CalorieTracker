@@ -1,6 +1,6 @@
 package com.plcoding.onboarding.domain.di
 
-import com.plcoding.onboarding.domain.use_case.ValidateNutrients
+import com.plcoding.onboarding.domain.usecase.ValidateNutrients
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

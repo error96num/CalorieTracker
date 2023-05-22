@@ -1,4 +1,4 @@
-package com.plcoding.tracker.domain.use_case
+package com.plcoding.tracker.domain.usecase
 
 import com.google.common.truth.Truth.assertThat
 import com.plcoding.core.domain.model.ActivityLevel

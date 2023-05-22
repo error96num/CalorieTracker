@@ -2,7 +2,7 @@ package com.plcoding.tracker.domain.di
 
 import com.plcoding.core.domain.preferences.Preferences
 import com.plcoding.tracker.domain.repository.TrackerRepository
-import com.plcoding.tracker.domain.use_case.*
+import com.plcoding.tracker.domain.usecase.*
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

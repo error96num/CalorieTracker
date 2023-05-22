@@ -1,4 +1,4 @@
-package com.plcoding.tracker.domain.use_case
+package com.plcoding.tracker.domain.usecase
 
 import com.plcoding.tracker.domain.model.TrackedFood
 import com.plcoding.tracker.domain.repository.TrackerRepository

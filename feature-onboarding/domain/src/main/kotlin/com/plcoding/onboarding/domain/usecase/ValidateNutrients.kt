@@ -1,4 +1,4 @@
-package com.plcoding.onboarding.domain.use_case
+package com.plcoding.onboarding.domain.usecase
 
 import com.plcoding.core.util.UiText
 import com.plcoding.core.R

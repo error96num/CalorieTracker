@@ -1,4 +1,4 @@
-package com.plcoding.core.domain.use_case
+package com.plcoding.core.domain.usecase
 
 class FilterOutDigits {
 
